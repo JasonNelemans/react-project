@@ -1,3 +1,6 @@
+import React from 'react';
+import Post from './Post';
+
 function Main() {
   return (
     <div>
@@ -5,3 +8,5 @@ function Main() {
     </div>
   )
 }
+
+export default Main
