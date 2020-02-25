@@ -11,7 +11,7 @@ export default function Post(props) {
       setValue('unliked')
     }
   }
-
+  
   const likeValue = value === 'unliked' ? 'not liked' : 'liked'
 
   const likeButton = value === 'unliked' ? 'Like' : 'Unlike'
@@ -23,8 +23,9 @@ export default function Post(props) {
       <div className="pf-picture">{props.picture}</div>
       <div className="name">Name</div>
       <div className="post-content">Post content</div>
-  <div className="number-of-likes">You have {likeValue} this</div>
-  <button onClick={handleClick}>{likeButton}</button>
+      <div className="like-counter">You have {props.likes} likes</div>
+      <div className="like-anouncement">You have {likeValue} this</div>
+      <button onClick={handleClick}>{likeButton}</button>
     </div>
   )
 }

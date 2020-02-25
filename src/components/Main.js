@@ -4,9 +4,20 @@ import Post from './Post';
 function Main() {
   return (
     <div>
-      <Post title={"First post"} picture={"Cat"}/>
-      <Post title={"Second post"} picture={"Dog"}/>
-      <Post title={"Third post"}/>
+      <Post 
+        title={"First post"} 
+        picture={"Cat"}
+        likes={3}
+      />
+      <Post 
+        title={"Second post"} 
+        picture={"Dog"}
+        likes={6}
+      />
+      <Post 
+        title={"Third post"}
+        likes={0}
+      />
     </div>
   )
 }
