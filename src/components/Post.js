@@ -1,9 +1,21 @@
 import React, {useState} from 'react';
 
 export default function Post(props) {
-  const [value, setValue] = useState(0)
+  const [value, setValue] = useState('unliked')
   
-  let likeCounter = value
+  
+  const handleClick = () => {
+    if(value === 'unliked') {
+      setValue('liked')
+    } else {
+      setValue('unliked')
+    }
+  }
+
+  const likeValue = value === 'unliked' ? 'not liked' : 'liked'
+
+  const likeButton = value === 'unliked' ? 'Like' : 'Unlike'
+
   
   return (
     <div>
@@ -11,8 +23,8 @@ export default function Post(props) {
       <div className="pf-picture">{props.picture}</div>
       <div className="name">Name</div>
       <div className="post-content">Post content</div>
-  <div className="number-of-likes">This post has {likeCounter} likes</div>
-      <button>Like</button>
+  <div className="number-of-likes">You have {likeValue} this</div>
+  <button onClick={handleClick}>{likeButton}</button>
     </div>
   )
 }
